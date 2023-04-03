@@ -30,7 +30,6 @@ const cameraSchema = new mongoose_1.Schema({
     serviceType: {
         type: String,
         required: true,
-        unique: true
     }
 }, {
     timestamps: true

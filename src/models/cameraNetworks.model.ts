@@ -27,7 +27,7 @@ const cameraNetworksSchema = new Schema<CameraNetwork>({
   networkServiceID:{
     type: String,
     required: true,
-    unique: true
+    unique: true,    
   },
   isActive: {
     type: Boolean,

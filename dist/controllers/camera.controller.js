@@ -22,9 +22,9 @@ function createCamera(req, res) {
             const cameraData = req.body.cameraData;
             const { serviceID, serviceType } = cameraData;
             // Check if a camera with the same serviceID and serviceType already exists
-            const existingCamera = yield camera_model_1.default.findOne({ serviceID, serviceType });
+            const existingCamera = yield camera_model_1.default.findOne({ serviceID });
             if (existingCamera) {
-                return res.status(409).json({ message: "Camera Details already exists" });
+                return res.status(409).json({ message: "Camera  already exists" });
             }
             const response = yield camera_model_1.default.create(cameraData);
             //Check if cameraNetwork already exists

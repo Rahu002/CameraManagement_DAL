@@ -17,7 +17,7 @@ const cameraNetworksSchema = new mongoose_1.Schema({
     networkServiceID: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
     },
     isActive: {
         type: Boolean,

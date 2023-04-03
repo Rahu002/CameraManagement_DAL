@@ -35,13 +35,12 @@ const cameraSchema = new Schema<Camera>({
   },
   serviceID: {
     type: String,
-    required: true,
-    unique: true
+    required: true,  
+    unique: true  
   },
   serviceType: {
     type: String,
-    required: true,
-    unique: true
+    required: true,    
   }
 },
   {
