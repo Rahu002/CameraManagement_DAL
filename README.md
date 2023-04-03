@@ -3,11 +3,13 @@
 This project is a DataAccess Layer for camera management system built using Node.js, Express, and MongoDB. It allows users to perform CRUD operation on create and manage cameras and camera networks.
 
 <!----------------------------------------------------- Getting Started ------------------------------------------->
-To get started with this project, clone the repository to your local machine and run the following commands:
-Copy code
+To get started with this project, clone develope the repository to your local machine and run the following commands:
 npm install
+npm run compile : to compile all the .tc file to .js files 
 npm start
-This will install the necessary dependencies and start the server. You can then access the API at http://localhost:3000.
+
+This will install the necessary dependencies and start the server.
+The API's can be accessed at http://localhost:3000.
 
 <!----------------------------------------------------- API Endpoints---------------------------------------------->
 <!-- Cameras -->
@@ -31,7 +33,7 @@ description: String (required)
 url: String (required)
 location: String (required)
 isActive: Boolean (default true)
-serviceID: String (required)
+serviceID: String (required) @unique
 serviceType: String (required)
 
 <!-- Camera Network -->
@@ -40,7 +42,7 @@ description: String (required)
 cameras: Array of Camera IDs (required)
 isActive: Boolean (default true)
 ipAddress: String (required)
-networkServiceID: String (required)
+networkServiceID: String (required) @unique
 
 <!--------------------------------------------------------Dependencies -------------------------------------------->
 This project uses the following dependencies:
